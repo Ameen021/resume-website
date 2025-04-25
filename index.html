@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>MohammadAmin's Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,6 +12,10 @@
     <h1>MohammadAmin Shadiyan</h1>
     <p>ITEC Student @ York University | Aspiring Developer</p>
   </header>
+  <div class="theme-toggle">
+    <button id="toggle-btn">Toggle Dark Mode 🌙</button>
+  </div>
+  
 
   <section id="about" class="fade-in" style="animation-delay: 0.3s;">
     <h2>About Me</h2>
@@ -55,4 +60,11 @@
   </footer>
 
 </body>
+<script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+  
 </html>
