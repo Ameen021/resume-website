@@ -1,6 +1,6 @@
-/* اصلی سایت */
+
 html {
-  scroll-behavior: smooth; /* اسکرول نرم */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* استارت اسکرین */
+
 #start-screen {
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@ body {
   font-size: 50px;
 }
 
-/* ستاره واقعی */
+
 .stars {
   width: 100%;
   height: 100%;
@@ -46,7 +46,7 @@ body {
   to {background-position: 1000px 1000px, 1025px 1025px;}
 }
 
-/* سکشن‌ها */
+
 section {
   padding: 20px;
   max-width: 800px;
@@ -61,7 +61,7 @@ header, footer {
   padding: 20px;
 }
 
-/* لینک‌ها */
+
 a {
   color: #4fc3f7;
   text-decoration: none;
@@ -71,7 +71,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* انیمیشن فید این */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -88,8 +88,8 @@ a:hover {
   animation: fadeInUp 1s ease forwards;
 }
 
-/* دکمه ورود پروژه */
-#enter-projects-btn {
+
+#enter-projects-btn, #back-to-resume-btn {
   display: block;
   margin: 20px auto;
   padding: 12px 24px;
@@ -103,19 +103,20 @@ a:hover {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#enter-projects-btn:hover {
+#enter-projects-btn:hover,
+#back-to-resume-btn:hover {
   background-color: #0288d1;
   transform: scale(1.05);
 }
 
-/* پیام خوشامد پروژه */
+
 .welcome-msg {
   text-align: center;
   margin-bottom: 30px;
   font-size: 28px;
 }
 
-/* کارت‌های پروژه */
+
 .project-card {
   background-color: #1e1e1e;
   margin: 20px auto;

@@ -42,18 +42,63 @@
   <!-- بخش پروژه‌ها -->
   <section id="projects" class="fade-in" style="animation-delay: 0.9s;">
     <h2>Projects</h2>
-    <button id="enter-projects-btn">Enter Projects</button> <!-- دکمه انیمیشنی -->
+    <button id="enter-projects-btn">Enter Projects</button>
+
     <div id="projects-content" style="display: none; margin-top: 20px;">
-      <h2 class="welcome-msg fade-in">Welcome to the world of projects!</h2> <!-- پیام خوشامد -->
+      <h2 class="welcome-msg fade-in">Welcome to the world of projects!</h2>
+
+      <h3 style="text-align:center;">🌐 Front-End Projects</h3>
+
       <div class="project-card fade-in">
-        <h3>Student Management System</h3>
-        <p>A simple Java application to manage student records.</p>
-        <a href="https://github.com/Ameen021/StudentManagementSystem" target="_blank">View Project</a>
+        <h3>Calculator App</h3>
+        <p>Basic calculator with clean UI and math operations</p>
+        <a href="https://github.com/Ameen021/calculator-project" target="_blank">GitHub</a>
+        <a href="https://ameen021.github.io/calculator-project/" target="_blank">Live Demo</a>
       </div>
+
       <div class="project-card fade-in">
-        <h3>Telegram Bot - پیام‌گیر کانال</h3>
-        <p>A bot allowing users to send free and VIP messages to a Telegram channel.</p>
+        <h3>To-Do List</h3>
+        <p>Add, check, and delete tasks – saved in LocalStorage</p>
+        <a href="https://github.com/Ameen021/to-do-list" target="_blank">GitHub</a>
+        <a href="https://ameen021.github.io/to-do-list/" target="_blank">Live Demo</a>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Weather App</h3>
+        <p>Uses OpenWeather API to display live weather info with dynamic background</p>
+        <a href="https://github.com/Ameen021/weather-app" target="_blank">GitHub</a><br>
+        <a href="https://ameen021.github.io/weather-app/" target="_blank">Live Demo</a>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Notes App</h3>
+        <p>Note-taking tool with local persistence using LocalStorage</p>
+        <a href="https://github.com/Ameen021/notes-app" target="_blank">GitHub</a>
+        <a href=" https://ameen021.github.io/notes-app/" target="_blank">Live Demo</a>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Password Manager</h3>
+        <p>Simple password manager with base64 encoding and browser storage</p>
+        <a href="https://github.com/Ameen021/password-manager" target="_blank">GitHub</a>
+        <a href="https://ameen021.github.io/password-manager/" target="_blank">Live Demo</a>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Student Management System (Java)</h3>
+        <p>Console-based Java project for managing student data</p>
+        <a href="https://github.com/Ameen021/StudentManagementSystem" target="_blank">GitHub</a>
+      </div>
+
+      <div class="project-card fade-in">
+        <h3>Telegram Bot – پیام‌گیر کانال</h3>
+        <p>Java-based bot to handle VIP & free message submissions on Telegram</p>
         <a href="https://t.me/StopiraniBot" target="_blank">Try the Bot</a>
+      </div>
+
+      <!-- دکمه بازگشت -->
+      <div style="text-align:center; margin-top: 40px;">
+        <button id="back-to-resume-btn">⬅️ Back to Resume</button>
       </div>
     </div>
   </section>
@@ -73,7 +118,6 @@
 
   <!-- اسکریپت -->
   <script>
-    // استارت اسکرین
     const startScreen = document.getElementById('start-screen');
     const startText = document.getElementById('start-text');
 
@@ -85,8 +129,8 @@
       startScreen.style.display = 'none';
     }, 4000);
 
-    // دکمه ورود به پروژه
     const enterBtn = document.getElementById('enter-projects-btn');
+    const projects = document.getElementById('projects');
     const projectsContent = document.getElementById('projects-content');
     const stars = document.querySelector('.stars');
     const sections = document.querySelectorAll('section');
@@ -96,14 +140,29 @@
     enterBtn.addEventListener('click', () => {
       stars.style.display = 'none';
       sections.forEach(section => {
-        section.style.display = 'none';
+        if (section.id !== "projects") {
+          section.style.display = 'none';
+        }
       });
       header.style.display = 'none';
       footer.style.display = 'none';
-      document.getElementById('projects').style.display = 'block';
+      projects.style.display = 'block';
       projectsContent.style.display = 'block';
       document.body.style.background = 'black';
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // اسکرول نرم به بالا
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const backBtn = document.getElementById('back-to-resume-btn');
+    backBtn.addEventListener('click', () => {
+      projects.style.display = 'block';
+      projectsContent.style.display = 'none';
+      stars.style.display = 'block';
+      sections.forEach(section => {
+        section.style.display = 'block';
+      });
+      header.style.display = 'block';
+      footer.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 
